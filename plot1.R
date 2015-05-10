@@ -15,9 +15,10 @@ makePlot<-function(reloadData=FALSE) {
   filtered<-filtered[filtered$Date>as.Date("31/1/2007","%d/%m/%Y"),]
   filtered<-filtered[filtered$Date<as.Date("3/2/2007","%d/%m/%Y"),]
   
-  active_power <- filtered$Global_active_power
-  hist(active_power,col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
+  # Make graph
+  hist(filtered$Global_active_power,col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
   
+  # Export to PNG
   dev.copy(png, file = "plot1.png")
   dev.off()
 }
