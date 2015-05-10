@@ -22,6 +22,6 @@ makePlot<-function(reloadData=FALSE) {
   plot(filtered$DateTime,filtered$Global_active_power,xlab="",ylab="Global Active Power (kilowatts)",type="l")
   
   # Export to PNG
-  dev.copy(png, file = "plot2.png")
+  dev.copy(png, file = "plot2.png",width=640)
   dev.off()
 }
